@@ -1,0 +1,464 @@
+{
+    "info": {
+        "_postman_id": "7b8a0a76-1af5-4b8a-8f37-7568e914b19e",
+        "name": "e-commerce",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Product",
+            "item": [
+                {
+                    "name": "Post Product",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/product/add",
+                            "path": [
+                                "product",
+                                "add"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Shirt\",\n  \"description\":\"Shirt is most clauthe weared on the world\",\n  \"richDescription\":\"Shirt is most clauthe weared on the world we like it all of us\",\n  \"image\":\"shirt.jpg\",\n  \"brand\":\"rwanda fashion\", \n  \"price\":\"15000\",\n  \"category\":\"6509998ed550c378452d60cb\",\n  \"countInstock\":\"2\",\n  \"rating\":\"10\",\n  \"numReview\":\"30\",\n  \"isFeatured\":\"true\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get All Product",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/product/findAll",
+                            "path": [
+                                "product",
+                                "findAll"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Find Product With Id",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/category/delete/650947e6832b804d5fa0c760",
+                            "path": [
+                                "category",
+                                "delete",
+                                "650947e6832b804d5fa0c760"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete product",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:5000/product/delete/65099365e360317617fbe9ac",
+                            "path": [
+                                "product",
+                                "delete",
+                                "65099365e360317617fbe9ac"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Product",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:5000/product/update/65099a3ad550c378452d",
+                            "path": [
+                                "product",
+                                "update",
+                                "65099a3ad550c378452d"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Shirt 1 new\",\n  \"description\":\"Shirt is most clauthe weared on the world\",\n  \"richDescription\":\"Shirt is most clauthe weared on the world we like it all of us\",\n  \"image\":\"shirt.jpg\",\n  \"brand\":\"rwanda fashion\", \n  \"price\":\"15000\",\n  \"category\":\"6509998ed550c378452d60cb\",\n  \"countInstock\":\"2\",\n  \"rating\":\"18\",\n  \"numReview\":\"20\",\n  \"isFeatured\":\"true\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Count Product",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/product/get/count",
+                            "path": [
+                                "product",
+                                "get",
+                                "count"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Product Featured",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/product/get/featured/1",
+                            "path": [
+                                "product",
+                                "get",
+                                "featured",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Category",
+            "item": [
+                {
+                    "name": "Post Category",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/category/add",
+                            "path": [
+                                "category",
+                                "add"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Clauther\",\n  \"icon\":\"icon-claudthers\",\n  \"color\":\"#eeeee\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTBhYzllODE3NTZiYTUwMjI1MWVlMGQiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTUzNjQ2NzQsImV4cCI6MTY5NTQ1MTA3NH0.UntYtZ3DHRRY1IT6LZPQdMWOxemxtfb1psB0PK2XhFg",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get all category",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/category/get",
+                            "path": [
+                                "category",
+                                "get"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTBhYzllODE3NTZiYTUwMjI1MWVlMGQiLCJpYXQiOjE2OTUzMDExNjcsImV4cCI6MTY5NTM4NzU2N30.3SJBvB_hEIUeq5wLvKxaUGgKGc2LsmoYsvrF2n5mQP8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete caegory",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:5000/category/delete/6509543bf8af953b49c148dd",
+                            "path": [
+                                "category",
+                                "delete",
+                                "6509543bf8af953b49c148dd"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "find one category",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/category/one/650959102ea38b854728b681",
+                            "path": [
+                                "category",
+                                "one",
+                                "650959102ea38b854728b681"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update Category",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:5000/category/update/650959392ea38b854728b685",
+                            "path": [
+                                "category",
+                                "update",
+                                "650959392ea38b854728b685"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\":\"Electronics Devices\",\n  \"icon\":\"icon-electronics\",\n  \"color\":\"#4444\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "Get All users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/users/getUsers",
+                            "path": [
+                                "users",
+                                "getUsers"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTBhYzhjOTIxNjBiMGQzMmRjMDhiZjEiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk1Nzk5NDUyLCJleHAiOjE2OTU4ODU4NTJ9.osDQ7BxSxrhappKEaURzvZugISLewad_0JLnWzu7QF8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/users/register",
+                            "path": [
+                                "users",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "  {\n   \n    \"name\": \"christisan\",\n    \"email\": \"chriss@gmail.com\",\n    \"password\": \"123456\",\n    \"phone\": 789356233,\n    \"isAdmin\": true,\n    \"street\": \"KK5\",\n    \"apartment\": \"apartment 100\",\n    \"city\": \"Kigali\",\n    \"zip\": \"0000\",\n    \"country\": \"Rwanda\"\n  }"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:5000/users/deleteUsers/650ac623757bfc622ca3f2be",
+                            "path": [
+                                "users",
+                                "deleteUsers",
+                                "650ac623757bfc622ca3f2be"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTBhYzllODE3NTZiYTUwMjI1MWVlMGQiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk1NDkyNTg5LCJleHAiOjE2OTU1Nzg5ODl9.G_JLQMamZFUH_jNqp_8D5cAjRjueufIdhkbPDgvttvg",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Single User",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/users/get/650ac8c92160b0d32dc08bf1",
+                            "path": [
+                                "users",
+                                "get",
+                                "650ac8c92160b0d32dc08bf1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:5000/users/updateUsers/650ac9e81756ba502251ee0d",
+                            "path": [
+                                "users",
+                                "updateUsers",
+                                "650ac9e81756ba502251ee0d"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": " {\n   \n    \"name\": \"Dushime Chriss\",\n    \"email\": \"dushime@gmail.com\",\n    \"password\": \"123456\",\n    \"phone\": 789356233,\n    \"isAdmin\": true,\n    \"street\": \"KK5\",\n    \"apartment\": \"apartment 100\",\n    \"city\": \"Kigali\",\n    \"zip\": \"0000\",\n    \"country\": \"Rwanda\"\n  }"
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/users/login",
+                            "path": [
+                                "users",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"muhire@gmail.com\",\n  \"password\":\"12345\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
